@@ -1,5 +1,5 @@
-package com.program_in_chinese;
 // Generated from 圈2.g4 by ANTLR 4.7
+package com.program_in_chinese;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
 /**
