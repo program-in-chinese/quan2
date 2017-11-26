@@ -24,7 +24,7 @@ public class 定制监听器 extends 圈2BaseListener {
     // 取变量或数的值
     String 值 = 上下文.T标识符().size() > 1 ? 上下文.T标识符(1).getText() : 上下文.T数().getText();
 
-    // 添加变量到表
+    // 更新变量值
     if (上下文.T标识符().size() > 1)
       变量表.put(变量名, 变量表.get(值));
     else
@@ -32,21 +32,21 @@ public class 定制监听器 extends 圈2BaseListener {
   }
 
   @Override
-  public void exit加(加Context ctx) {
+  public void exit加(加Context 上下文) {
     // 加语句分析结束时运行此方法
 
-    String 变量名 = ctx.T标识符().size() > 1 ? ctx.T标识符(1).getText() : ctx.T标识符(0).getText();
-    int 值 = ctx.T标识符().size() > 1 ? 变量表.get(ctx.T标识符(0).getText())
-        : Integer.parseInt(ctx.T数().getText());
+    String 变量名 = 上下文.T标识符().size() > 1 ? 上下文.T标识符(1).getText() : 上下文.T标识符(0).getText();
+    int 值 = 上下文.T标识符().size() > 1 ? 变量表.get(上下文.T标识符(0).getText())
+        : Integer.parseInt(上下文.T数().getText());
 
     变量表.put(变量名, 变量表.get(变量名) + 值);
   }
 
   @Override
-  public void exit打印(打印Context ctx) {
+  public void exit打印(打印Context 上下文) {
     // 打印语句分析结束时运行此方法
 
-    String 输出 = ctx.T标识符() == null ? ctx.T数().getText() : 变量表.get(ctx.T标识符().getText()).toString();
+    String 输出 = 上下文.T标识符() == null ? 上下文.T数().getText() : 变量表.get(上下文.T标识符().getText()).toString();
     System.out.println(输出);
   }
 
