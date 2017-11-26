@@ -1,9 +1,9 @@
-begin
-    let a be 5
-    let b be 10
-    add 3 to b
-    add b to a
-    add a to b
-    print b
-    print 3
-end
+开始
+    使 a 为 5
+    使 b 为 10
+    加 3 到 b
+    加 b 到 a
+    加 a 到 b
+    打印 b
+    打印 3
+结束
