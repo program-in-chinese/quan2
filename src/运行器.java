@@ -12,17 +12,16 @@ import com.program_in_chinese.圈2Parser;
 public class 运行器 {
   public static void main(String[] args) {
     try {
-        ANTLRInputStream input = new ANTLRInputStream(
-            new FileInputStream(args[0]));    
+      ANTLRInputStream input = new ANTLRInputStream(new FileInputStream(args[0]));
 
-        圈2Lexer lexer = new 圈2Lexer(input);
-        圈2Parser parser = new 圈2Parser(new CommonTokenStream(lexer));
-        parser.addParseListener(new 定制监听器());
+      圈2Lexer lexer = new 圈2Lexer(input);
+      圈2Parser parser = new 圈2Parser(new CommonTokenStream(lexer));
+      parser.addParseListener(new 定制监听器());
 
-        // Start parsing
-        parser.程序();
+      // Start parsing
+      parser.程序();
     } catch (IOException e) {
-        e.printStackTrace();
+      e.printStackTrace();
     }
-}
+  }
 }
