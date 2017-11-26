@@ -16,61 +16,61 @@ public class 圈2BaseListener implements 圈2Listener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterProgram(圈2Parser.ProgramContext ctx) { }
+	@Override public void enter程序(圈2Parser.程序Context ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitProgram(圈2Parser.ProgramContext ctx) { }
+	@Override public void exit程序(圈2Parser.程序Context ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterStatement(圈2Parser.StatementContext ctx) { }
+	@Override public void enter声明(圈2Parser.声明Context ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitStatement(圈2Parser.StatementContext ctx) { }
+	@Override public void exit声明(圈2Parser.声明Context ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterAssign(圈2Parser.AssignContext ctx) { }
+	@Override public void enter赋值(圈2Parser.赋值Context ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitAssign(圈2Parser.AssignContext ctx) { }
+	@Override public void exit赋值(圈2Parser.赋值Context ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterPrint(圈2Parser.PrintContext ctx) { }
+	@Override public void enter打印(圈2Parser.打印Context ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitPrint(圈2Parser.PrintContext ctx) { }
+	@Override public void exit打印(圈2Parser.打印Context ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterAdd(圈2Parser.AddContext ctx) { }
+	@Override public void enter加(圈2Parser.加Context ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitAdd(圈2Parser.AddContext ctx) { }
+	@Override public void exit加(圈2Parser.加Context ctx) { }
 
 	/**
 	 * {@inheritDoc}

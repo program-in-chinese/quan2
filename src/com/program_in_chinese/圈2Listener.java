@@ -8,53 +8,53 @@ import org.antlr.v4.runtime.tree.ParseTreeListener;
  */
 public interface 圈2Listener extends ParseTreeListener {
 	/**
-	 * Enter a parse tree produced by {@link 圈2Parser#program}.
+	 * Enter a parse tree produced by {@link 圈2Parser#程序}.
 	 * @param ctx the parse tree
 	 */
-	void enterProgram(圈2Parser.ProgramContext ctx);
+	void enter程序(圈2Parser.程序Context ctx);
 	/**
-	 * Exit a parse tree produced by {@link 圈2Parser#program}.
+	 * Exit a parse tree produced by {@link 圈2Parser#程序}.
 	 * @param ctx the parse tree
 	 */
-	void exitProgram(圈2Parser.ProgramContext ctx);
+	void exit程序(圈2Parser.程序Context ctx);
 	/**
-	 * Enter a parse tree produced by {@link 圈2Parser#statement}.
+	 * Enter a parse tree produced by {@link 圈2Parser#声明}.
 	 * @param ctx the parse tree
 	 */
-	void enterStatement(圈2Parser.StatementContext ctx);
+	void enter声明(圈2Parser.声明Context ctx);
 	/**
-	 * Exit a parse tree produced by {@link 圈2Parser#statement}.
+	 * Exit a parse tree produced by {@link 圈2Parser#声明}.
 	 * @param ctx the parse tree
 	 */
-	void exitStatement(圈2Parser.StatementContext ctx);
+	void exit声明(圈2Parser.声明Context ctx);
 	/**
-	 * Enter a parse tree produced by {@link 圈2Parser#assign}.
+	 * Enter a parse tree produced by {@link 圈2Parser#赋值}.
 	 * @param ctx the parse tree
 	 */
-	void enterAssign(圈2Parser.AssignContext ctx);
+	void enter赋值(圈2Parser.赋值Context ctx);
 	/**
-	 * Exit a parse tree produced by {@link 圈2Parser#assign}.
+	 * Exit a parse tree produced by {@link 圈2Parser#赋值}.
 	 * @param ctx the parse tree
 	 */
-	void exitAssign(圈2Parser.AssignContext ctx);
+	void exit赋值(圈2Parser.赋值Context ctx);
 	/**
-	 * Enter a parse tree produced by {@link 圈2Parser#print}.
+	 * Enter a parse tree produced by {@link 圈2Parser#打印}.
 	 * @param ctx the parse tree
 	 */
-	void enterPrint(圈2Parser.PrintContext ctx);
+	void enter打印(圈2Parser.打印Context ctx);
 	/**
-	 * Exit a parse tree produced by {@link 圈2Parser#print}.
+	 * Exit a parse tree produced by {@link 圈2Parser#打印}.
 	 * @param ctx the parse tree
 	 */
-	void exitPrint(圈2Parser.PrintContext ctx);
+	void exit打印(圈2Parser.打印Context ctx);
 	/**
-	 * Enter a parse tree produced by {@link 圈2Parser#add}.
+	 * Enter a parse tree produced by {@link 圈2Parser#加}.
 	 * @param ctx the parse tree
 	 */
-	void enterAdd(圈2Parser.AddContext ctx);
+	void enter加(圈2Parser.加Context ctx);
 	/**
-	 * Exit a parse tree produced by {@link 圈2Parser#add}.
+	 * Exit a parse tree produced by {@link 圈2Parser#加}.
 	 * @param ctx the parse tree
 	 */
-	void exitAdd(圈2Parser.AddContext ctx);
+	void exit加(圈2Parser.加Context ctx);
 }

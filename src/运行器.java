@@ -20,7 +20,7 @@ public class 运行器 {
         parser.addParseListener(new MyListener());
 
         // Start parsing
-        parser.program(); 
+        parser.程序();
     } catch (IOException e) {
         e.printStackTrace();
     }

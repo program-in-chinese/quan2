@@ -1,11 +1,11 @@
 grammar 圈2;
-program   : 'begin' statement+ 'end';
+程序   : 'begin' 声明+ 'end';
           
-statement : assign | add | print ;
+声明 : 赋值 | 加 | 打印 ;
 
-assign    : 'let' ID 'be' (NUMBER | ID) ;
-print     : 'print' (NUMBER | ID) ;
-add       : 'add' (NUMBER | ID) 'to' ID ;
+赋值    : 'let' ID 'be' (NUMBER | ID) ;
+打印     : 'print' (NUMBER | ID) ;
+加       : 'add' (NUMBER | ID) 'to' ID ;
 
 ID     : [a-z]+ ;
 NUMBER : [0-9]+ ;

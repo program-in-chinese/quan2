@@ -20,10 +20,9 @@ public class 圈2Parser extends Parser {
 		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, ID=8, NUMBER=9, 
 		WS=10;
 	public static final int
-		RULE_program = 0, RULE_statement = 1, RULE_assign = 2, RULE_print = 3, 
-		RULE_add = 4;
+		RULE_程序 = 0, RULE_声明 = 1, RULE_赋值 = 2, RULE_打印 = 3, RULE_加 = 4;
 	public static final String[] ruleNames = {
-		"program", "statement", "assign", "print", "add"
+		"程序", "声明", "赋值", "打印", "加"
 	};
 
 	private static final String[] _LITERAL_NAMES = {
@@ -81,30 +80,30 @@ public class 圈2Parser extends Parser {
 		super(input);
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
-	public static class ProgramContext extends ParserRuleContext {
-		public List<StatementContext> statement() {
-			return getRuleContexts(StatementContext.class);
+	public static class 程序Context extends ParserRuleContext {
+		public List<声明Context> 声明() {
+			return getRuleContexts(声明Context.class);
 		}
-		public StatementContext statement(int i) {
-			return getRuleContext(StatementContext.class,i);
+		public 声明Context 声明(int i) {
+			return getRuleContext(声明Context.class,i);
 		}
-		public ProgramContext(ParserRuleContext parent, int invokingState) {
+		public 程序Context(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_program; }
+		@Override public int getRuleIndex() { return RULE_程序; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof 圈2Listener ) ((圈2Listener)listener).enterProgram(this);
+			if ( listener instanceof 圈2Listener ) ((圈2Listener)listener).enter程序(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof 圈2Listener ) ((圈2Listener)listener).exitProgram(this);
+			if ( listener instanceof 圈2Listener ) ((圈2Listener)listener).exit程序(this);
 		}
 	}
 
-	public final ProgramContext program() throws RecognitionException {
-		ProgramContext _localctx = new ProgramContext(_ctx, getState());
-		enterRule(_localctx, 0, RULE_program);
+	public final 程序Context 程序() throws RecognitionException {
+		程序Context _localctx = new 程序Context(_ctx, getState());
+		enterRule(_localctx, 0, RULE_程序);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
@@ -118,7 +117,7 @@ public class 圈2Parser extends Parser {
 				{
 				{
 				setState(11);
-				statement();
+				声明();
 				}
 				}
 				setState(14); 
@@ -140,33 +139,33 @@ public class 圈2Parser extends Parser {
 		return _localctx;
 	}
 
-	public static class StatementContext extends ParserRuleContext {
-		public AssignContext assign() {
-			return getRuleContext(AssignContext.class,0);
+	public static class 声明Context extends ParserRuleContext {
+		public 赋值Context 赋值() {
+			return getRuleContext(赋值Context.class,0);
 		}
-		public AddContext add() {
-			return getRuleContext(AddContext.class,0);
+		public 加Context 加() {
+			return getRuleContext(加Context.class,0);
 		}
-		public PrintContext print() {
-			return getRuleContext(PrintContext.class,0);
+		public 打印Context 打印() {
+			return getRuleContext(打印Context.class,0);
 		}
-		public StatementContext(ParserRuleContext parent, int invokingState) {
+		public 声明Context(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_statement; }
+		@Override public int getRuleIndex() { return RULE_声明; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof 圈2Listener ) ((圈2Listener)listener).enterStatement(this);
+			if ( listener instanceof 圈2Listener ) ((圈2Listener)listener).enter声明(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof 圈2Listener ) ((圈2Listener)listener).exitStatement(this);
+			if ( listener instanceof 圈2Listener ) ((圈2Listener)listener).exit声明(this);
 		}
 	}
 
-	public final StatementContext statement() throws RecognitionException {
-		StatementContext _localctx = new StatementContext(_ctx, getState());
-		enterRule(_localctx, 2, RULE_statement);
+	public final 声明Context 声明() throws RecognitionException {
+		声明Context _localctx = new 声明Context(_ctx, getState());
+		enterRule(_localctx, 2, RULE_声明);
 		try {
 			setState(21);
 			_errHandler.sync(this);
@@ -175,21 +174,21 @@ public class 圈2Parser extends Parser {
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(18);
-				assign();
+				赋值();
 				}
 				break;
 			case T__5:
 				enterOuterAlt(_localctx, 2);
 				{
 				setState(19);
-				add();
+				加();
 				}
 				break;
 			case T__4:
 				enterOuterAlt(_localctx, 3);
 				{
 				setState(20);
-				print();
+				打印();
 				}
 				break;
 			default:
@@ -207,29 +206,29 @@ public class 圈2Parser extends Parser {
 		return _localctx;
 	}
 
-	public static class AssignContext extends ParserRuleContext {
+	public static class 赋值Context extends ParserRuleContext {
 		public List<TerminalNode> ID() { return getTokens(圈2Parser.ID); }
 		public TerminalNode ID(int i) {
 			return getToken(圈2Parser.ID, i);
 		}
 		public TerminalNode NUMBER() { return getToken(圈2Parser.NUMBER, 0); }
-		public AssignContext(ParserRuleContext parent, int invokingState) {
+		public 赋值Context(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_assign; }
+		@Override public int getRuleIndex() { return RULE_赋值; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof 圈2Listener ) ((圈2Listener)listener).enterAssign(this);
+			if ( listener instanceof 圈2Listener ) ((圈2Listener)listener).enter赋值(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof 圈2Listener ) ((圈2Listener)listener).exitAssign(this);
+			if ( listener instanceof 圈2Listener ) ((圈2Listener)listener).exit赋值(this);
 		}
 	}
 
-	public final AssignContext assign() throws RecognitionException {
-		AssignContext _localctx = new AssignContext(_ctx, getState());
-		enterRule(_localctx, 4, RULE_assign);
+	public final 赋值Context 赋值() throws RecognitionException {
+		赋值Context _localctx = new 赋值Context(_ctx, getState());
+		enterRule(_localctx, 4, RULE_赋值);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
@@ -263,26 +262,26 @@ public class 圈2Parser extends Parser {
 		return _localctx;
 	}
 
-	public static class PrintContext extends ParserRuleContext {
+	public static class 打印Context extends ParserRuleContext {
 		public TerminalNode NUMBER() { return getToken(圈2Parser.NUMBER, 0); }
 		public TerminalNode ID() { return getToken(圈2Parser.ID, 0); }
-		public PrintContext(ParserRuleContext parent, int invokingState) {
+		public 打印Context(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_print; }
+		@Override public int getRuleIndex() { return RULE_打印; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof 圈2Listener ) ((圈2Listener)listener).enterPrint(this);
+			if ( listener instanceof 圈2Listener ) ((圈2Listener)listener).enter打印(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof 圈2Listener ) ((圈2Listener)listener).exitPrint(this);
+			if ( listener instanceof 圈2Listener ) ((圈2Listener)listener).exit打印(this);
 		}
 	}
 
-	public final PrintContext print() throws RecognitionException {
-		PrintContext _localctx = new PrintContext(_ctx, getState());
-		enterRule(_localctx, 6, RULE_print);
+	public final 打印Context 打印() throws RecognitionException {
+		打印Context _localctx = new 打印Context(_ctx, getState());
+		enterRule(_localctx, 6, RULE_打印);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
@@ -312,29 +311,29 @@ public class 圈2Parser extends Parser {
 		return _localctx;
 	}
 
-	public static class AddContext extends ParserRuleContext {
+	public static class 加Context extends ParserRuleContext {
 		public List<TerminalNode> ID() { return getTokens(圈2Parser.ID); }
 		public TerminalNode ID(int i) {
 			return getToken(圈2Parser.ID, i);
 		}
 		public TerminalNode NUMBER() { return getToken(圈2Parser.NUMBER, 0); }
-		public AddContext(ParserRuleContext parent, int invokingState) {
+		public 加Context(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_add; }
+		@Override public int getRuleIndex() { return RULE_加; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof 圈2Listener ) ((圈2Listener)listener).enterAdd(this);
+			if ( listener instanceof 圈2Listener ) ((圈2Listener)listener).enter加(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof 圈2Listener ) ((圈2Listener)listener).exitAdd(this);
+			if ( listener instanceof 圈2Listener ) ((圈2Listener)listener).exit加(this);
 		}
 	}
 
-	public final AddContext add() throws RecognitionException {
-		AddContext _localctx = new AddContext(_ctx, getState());
-		enterRule(_localctx, 8, RULE_add);
+	public final 加Context 加() throws RecognitionException {
+		加Context _localctx = new 加Context(_ctx, getState());
+		enterRule(_localctx, 8, RULE_加);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);

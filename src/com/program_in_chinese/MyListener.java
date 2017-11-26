@@ -1,8 +1,8 @@
 package com.program_in_chinese;
 
-import static com.program_in_chinese.圈2Parser.AddContext;
-import static com.program_in_chinese.圈2Parser.AssignContext;
-import static com.program_in_chinese.圈2Parser.PrintContext;
+import static com.program_in_chinese.圈2Parser.加Context;
+import static com.program_in_chinese.圈2Parser.赋值Context;
+import static com.program_in_chinese.圈2Parser.打印Context;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -16,7 +16,7 @@ public class MyListener extends 圈2BaseListener {
     }
     
     @Override
-    public void exitAssign(AssignContext ctx) {
+    public void exit赋值(赋值Context ctx) {
         // This method is called when the parser has finished
         // parsing the assign statement
         
@@ -35,7 +35,7 @@ public class MyListener extends 圈2BaseListener {
     }
     
     @Override
-    public void exitAdd(AddContext ctx) {
+    public void exit加(加Context ctx) {
         // This method is called when the parser has finished
         // parsing the add statement
         
@@ -48,7 +48,7 @@ public class MyListener extends 圈2BaseListener {
     }
     
     @Override
-    public void exitPrint(PrintContext ctx) {
+    public void exit打印(打印Context ctx) {
         // This method is called when the parser has finished
         // parsing the print statement
         
