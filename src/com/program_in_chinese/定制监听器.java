@@ -7,11 +7,11 @@ import static com.program_in_chinese.圈2Parser.打印Context;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MyListener extends 圈2BaseListener {
+public class 定制监听器 extends 圈2BaseListener {
 
     private Map<String, Integer> variables;
     
-    public MyListener() {
+    public 定制监听器() {
         variables = new HashMap<>();
     }
     
