@@ -9,50 +9,45 @@ import java.util.Map;
 
 public class 定制监听器 extends 圈2BaseListener {
 
-  private Map<String, Integer> variables;
+  private Map<String, Integer> 变量表;
 
   public 定制监听器() {
-    variables = new HashMap<>();
+    变量表 = new HashMap<>();
   }
 
   @Override
-  public void exit赋值(赋值Context ctx) {
-    // This method is called when the parser has finished
-    // parsing the assign statement
+  public void exit赋值(赋值Context 上下文) {
+    // 赋值语句分析结束时运行此方法
 
-    // Get variable name
-    String variableName = ctx.T标识符(0).getText();
+    String 变量名 = 上下文.T标识符(0).getText();
 
-    // Get value from variable or number
-    String value = ctx.T标识符().size() > 1 ? ctx.T标识符(1).getText() : ctx.T数().getText();
+    // 取变量或数的值
+    String 值 = 上下文.T标识符().size() > 1 ? 上下文.T标识符(1).getText() : 上下文.T数().getText();
 
-    // Add variable to map
-    if (ctx.T标识符().size() > 1)
-      variables.put(variableName, variables.get(value));
+    // 添加变量到表
+    if (上下文.T标识符().size() > 1)
+      变量表.put(变量名, 变量表.get(值));
     else
-      variables.put(variableName, Integer.parseInt(value));
+      变量表.put(变量名, Integer.parseInt(值));
   }
 
   @Override
   public void exit加(加Context ctx) {
-    // This method is called when the parser has finished
-    // parsing the add statement
+    // 加语句分析结束时运行此方法
 
-    String variableName = ctx.T标识符().size() > 1 ? ctx.T标识符(1).getText() : ctx.T标识符(0).getText();
-    int value = ctx.T标识符().size() > 1 ? variables.get(ctx.T标识符(0).getText())
+    String 变量名 = ctx.T标识符().size() > 1 ? ctx.T标识符(1).getText() : ctx.T标识符(0).getText();
+    int 值 = ctx.T标识符().size() > 1 ? 变量表.get(ctx.T标识符(0).getText())
         : Integer.parseInt(ctx.T数().getText());
 
-    variables.put(variableName, variables.get(variableName) + value);
+    变量表.put(变量名, 变量表.get(变量名) + 值);
   }
 
   @Override
   public void exit打印(打印Context ctx) {
-    // This method is called when the parser has finished
-    // parsing the print statement
+    // 打印语句分析结束时运行此方法
 
-    String output =
-        ctx.T标识符() == null ? ctx.T数().getText() : variables.get(ctx.T标识符().getText()).toString();
-    System.out.println(output);
+    String 输出 = ctx.T标识符() == null ? ctx.T数().getText() : 变量表.get(ctx.T标识符().getText()).toString();
+    System.out.println(输出);
   }
 
 }
