@@ -17,8 +17,8 @@ public class 圈2Lexer extends Lexer {
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, ID=8, NUMBER=9, 
-		WS=10;
+		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, T标识符=8, T数=9, 
+		T空白=10;
 	public static String[] channelNames = {
 		"DEFAULT_TOKEN_CHANNEL", "HIDDEN"
 	};
@@ -28,8 +28,8 @@ public class 圈2Lexer extends Lexer {
 	};
 
 	public static final String[] ruleNames = {
-		"T__0", "T__1", "T__2", "T__3", "T__4", "T__5", "T__6", "ID", "NUMBER", 
-		"WS"
+		"T__0", "T__1", "T__2", "T__3", "T__4", "T__5", "T__6", "T标识符", "T数", 
+		"T空白"
 	};
 
 	private static final String[] _LITERAL_NAMES = {
@@ -37,7 +37,8 @@ public class 圈2Lexer extends Lexer {
 		"'\u52A0'", "'\u5230'"
 	};
 	private static final String[] _SYMBOLIC_NAMES = {
-		null, null, null, null, null, null, null, null, "ID", "NUMBER", "WS"
+		null, null, null, null, null, null, null, null, "T\u0001\u0002\u0003", 
+		"T\u0001", "T\u0001\u0002"
 	};
 	public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
 

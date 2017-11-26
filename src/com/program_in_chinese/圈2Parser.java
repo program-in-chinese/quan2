@@ -17,8 +17,8 @@ public class 圈2Parser extends Parser {
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, ID=8, NUMBER=9, 
-		WS=10;
+		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, T标识符=8, T数=9, 
+		T空白=10;
 	public static final int
 		RULE_程序 = 0, RULE_声明 = 1, RULE_赋值 = 2, RULE_打印 = 3, RULE_加 = 4;
 	public static final String[] ruleNames = {
@@ -30,7 +30,8 @@ public class 圈2Parser extends Parser {
 		"'\u52A0'", "'\u5230'"
 	};
 	private static final String[] _SYMBOLIC_NAMES = {
-		null, null, null, null, null, null, null, null, "ID", "NUMBER", "WS"
+		null, null, null, null, null, null, null, null, "T\u0001\u0002\u0003", 
+		"T\u0001", "T\u0001\u0002"
 	};
 	public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
 
@@ -208,11 +209,11 @@ public class 圈2Parser extends Parser {
 	}
 
 	public static class 赋值Context extends ParserRuleContext {
-		public List<TerminalNode> ID() { return getTokens(圈2Parser.ID); }
-		public TerminalNode ID(int i) {
-			return getToken(圈2Parser.ID, i);
+		public List<TerminalNode> T标识符() { return getTokens(圈2Parser.T标识符); }
+		public TerminalNode T标识符(int i) {
+			return getToken(圈2Parser.T标识符, i);
 		}
-		public TerminalNode NUMBER() { return getToken(圈2Parser.NUMBER, 0); }
+		public TerminalNode T数() { return getToken(圈2Parser.T数, 0); }
 		public 赋值Context(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -237,12 +238,12 @@ public class 圈2Parser extends Parser {
 			setState(23);
 			match(T__2);
 			setState(24);
-			match(ID);
+			match(T标识符);
 			setState(25);
 			match(T__3);
 			setState(26);
 			_la = _input.LA(1);
-			if ( !(_la==ID || _la==NUMBER) ) {
+			if ( !(_la==T标识符 || _la==T数) ) {
 			_errHandler.recoverInline(this);
 			}
 			else {
@@ -264,8 +265,8 @@ public class 圈2Parser extends Parser {
 	}
 
 	public static class 打印Context extends ParserRuleContext {
-		public TerminalNode NUMBER() { return getToken(圈2Parser.NUMBER, 0); }
-		public TerminalNode ID() { return getToken(圈2Parser.ID, 0); }
+		public TerminalNode T数() { return getToken(圈2Parser.T数, 0); }
+		public TerminalNode T标识符() { return getToken(圈2Parser.T标识符, 0); }
 		public 打印Context(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -291,7 +292,7 @@ public class 圈2Parser extends Parser {
 			match(T__4);
 			setState(29);
 			_la = _input.LA(1);
-			if ( !(_la==ID || _la==NUMBER) ) {
+			if ( !(_la==T标识符 || _la==T数) ) {
 			_errHandler.recoverInline(this);
 			}
 			else {
@@ -313,11 +314,11 @@ public class 圈2Parser extends Parser {
 	}
 
 	public static class 加Context extends ParserRuleContext {
-		public List<TerminalNode> ID() { return getTokens(圈2Parser.ID); }
-		public TerminalNode ID(int i) {
-			return getToken(圈2Parser.ID, i);
+		public List<TerminalNode> T标识符() { return getTokens(圈2Parser.T标识符); }
+		public TerminalNode T标识符(int i) {
+			return getToken(圈2Parser.T标识符, i);
 		}
-		public TerminalNode NUMBER() { return getToken(圈2Parser.NUMBER, 0); }
+		public TerminalNode T数() { return getToken(圈2Parser.T数, 0); }
 		public 加Context(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -343,7 +344,7 @@ public class 圈2Parser extends Parser {
 			match(T__5);
 			setState(32);
 			_la = _input.LA(1);
-			if ( !(_la==ID || _la==NUMBER) ) {
+			if ( !(_la==T标识符 || _la==T数) ) {
 			_errHandler.recoverInline(this);
 			}
 			else {
@@ -354,7 +355,7 @@ public class 圈2Parser extends Parser {
 			setState(33);
 			match(T__6);
 			setState(34);
-			match(ID);
+			match(T标识符);
 			}
 		}
 		catch (RecognitionException re) {

@@ -21,14 +21,14 @@ public class MyListener extends 圈2BaseListener {
         // parsing the assign statement
         
         // Get variable name
-        String variableName = ctx.ID(0).getText();
+        String variableName = ctx.T标识符(0).getText();
         
         // Get value from variable or number
-        String value = ctx.ID().size() > 1 ? ctx.ID(1).getText() 
-                : ctx.NUMBER().getText();
+        String value = ctx.T标识符().size() > 1 ? ctx.T标识符(1).getText() 
+                : ctx.T数().getText();
         
         // Add variable to map      
-        if(ctx.ID().size() > 1)
+        if(ctx.T标识符().size() > 1)
             variables.put(variableName, variables.get(value));
         else
             variables.put(variableName, Integer.parseInt(value));
@@ -39,10 +39,10 @@ public class MyListener extends 圈2BaseListener {
         // This method is called when the parser has finished
         // parsing the add statement
         
-        String variableName = ctx.ID().size() > 1 ? ctx.ID(1).getText() 
-                : ctx.ID(0).getText();
-        int value = ctx.ID().size() > 1 ? variables.get(ctx.ID(0).getText()) 
-                : Integer.parseInt(ctx.NUMBER().getText());
+        String variableName = ctx.T标识符().size() > 1 ? ctx.T标识符(1).getText() 
+                : ctx.T标识符(0).getText();
+        int value = ctx.T标识符().size() > 1 ? variables.get(ctx.T标识符(0).getText()) 
+                : Integer.parseInt(ctx.T数().getText());
         
         variables.put(variableName, variables.get(variableName) + value);
     }
@@ -52,8 +52,8 @@ public class MyListener extends 圈2BaseListener {
         // This method is called when the parser has finished
         // parsing the print statement
         
-        String output = ctx.ID() == null ? ctx.NUMBER().getText() 
-                : variables.get(ctx.ID().getText()).toString();
+        String output = ctx.T标识符() == null ? ctx.T数().getText() 
+                : variables.get(ctx.T标识符().getText()).toString();
         System.out.println(output);
     }
 
