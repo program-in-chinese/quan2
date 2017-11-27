@@ -57,4 +57,14 @@ public interface 圈2Listener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exit加(圈2Parser.加Context ctx);
+	/**
+	 * Enter a parse tree produced by {@link 圈2Parser#标识符}.
+	 * @param ctx the parse tree
+	 */
+	void enter标识符(圈2Parser.标识符Context ctx);
+	/**
+	 * Exit a parse tree produced by {@link 圈2Parser#标识符}.
+	 * @param ctx the parse tree
+	 */
+	void exit标识符(圈2Parser.标识符Context ctx);
 }

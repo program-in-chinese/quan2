@@ -71,6 +71,18 @@ public class 圈2BaseListener implements 圈2Listener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exit加(圈2Parser.加Context ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enter标识符(圈2Parser.标识符Context ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exit标识符(圈2Parser.标识符Context ctx) { }
 
 	/**
 	 * {@inheritDoc}
