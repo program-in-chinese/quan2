@@ -1,3 +1,5 @@
+介绍文章: [编程语言试验之Antlr4+Java实现"圈2"](https://zhuanlan.zhihu.com/p/31429800)
+
 代码源自: http://progur.com/2016/09/how-to-create-language-using-antlr4.html
 
 为Eclipse项目. 如有问题请提issue.
