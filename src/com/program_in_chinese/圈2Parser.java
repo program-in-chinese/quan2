@@ -26,8 +26,8 @@ public class 圈2Parser extends Parser {
 	};
 
 	private static final String[] _LITERAL_NAMES = {
-		null, "'\u5F00\u59CB'", "'\u7ED3\u675F'", "'\u4F7F'", "'\u4E3A'", "'\u6253\u5370'", 
-		"'\u52A0'", "'\u5230'"
+		null, "'\u5F00\u59CB'", "'\u7ED3\u675F'", "'\u8D4B\u503C'", "'\u6210\u4E3A'", 
+		"'\u6253\u5370'", "'\u7D2F\u52A0'", "'\u4F5C\u7528'"
 	};
 	private static final String[] _SYMBOLIC_NAMES = {
 		null, null, null, null, null, null, null, null, "T\u0001\u0002\u0003\u0004\u0005", 
